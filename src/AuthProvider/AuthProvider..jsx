@@ -64,7 +64,7 @@ const AuthProvider = ({ children }) => {
       console.log('CurrentUser-->', currentUser)
       // 
       if(currentUser){
-        axios.post('http://localhost:3000/authentication',{email:currentUser.email})
+        axios.post('http://localhost:4000/authentication',{email:currentUser.email})
         .then(data=>{
             if(data.data){
                 localStorage.setItem("access-token",data?.data?.token)
