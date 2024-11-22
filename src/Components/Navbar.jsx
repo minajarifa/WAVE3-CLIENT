@@ -1,4 +1,4 @@
-import { NavLink, useNavigate } from "react-router-dom";
+import { Link, NavLink, useNavigate } from "react-router-dom";
 import useAuth from "../hooks/useAuth";
 
 
@@ -72,9 +72,9 @@ const Navbar = () => {
                             tabIndex={0}
                             className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
                             <li>
-                                <a className="justify-between">
+                                <Link to="/dashboard/Overview" className="justify-between">
                                     Dashboard
-                                </a>
+                                </Link>
                             </li>
                             <li><a>Settings</a></li>
                             <button onClick={handleLogout} className="btn btn-outline btn-success btn-sm">Logout</button>
