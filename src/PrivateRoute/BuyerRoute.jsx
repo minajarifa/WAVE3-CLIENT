@@ -2,6 +2,7 @@ import { Navigate, useLocation } from "react-router-dom";
 import PropTypes from 'prop-types';
 import useAuth from "../hooks/useAuth";
 import useUserData from "../hooks/useUserData";
+import Loading from "../Components/Loading";
 
 
 
@@ -10,7 +11,7 @@ export default function BuyerRoute({children}) {
     const location = useLocation();
     const userData = useUserData();
     if (loding|| !userData?.role) {
-        return <span className="loading loading-bars loading-lg"></span>
+        return <Loading/>
     }
     if (user && userData?.role === "buyer") {
         return children

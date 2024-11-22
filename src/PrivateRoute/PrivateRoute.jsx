@@ -12,7 +12,7 @@ export default function PrivateRoute({children}) {
         return children
     }else{
 
-        return <Navigate  state={{from: location}} replace />
+        return <Navigate   state={{from: location}} replace />
     }
 }
 PrivateRoute.propTypes = {

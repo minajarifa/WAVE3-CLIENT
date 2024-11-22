@@ -19,8 +19,9 @@ const Register = () => {
         const email = data.email;
         const role = data.role;
         const status = role === "buyer" ? "approved" : "pending";
-        const withList = [];
-        const userData = { email, role, status, withList }
+        const wishList = [];
+        const card=[]
+        const userData = { email, role, status, wishList,card }
         console.log(userData)
         console.log(data)
         try {

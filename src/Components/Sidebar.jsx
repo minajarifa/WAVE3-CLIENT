@@ -6,9 +6,11 @@ import { TbLogout2 } from "react-icons/tb";
 // import { SiBookmyshow } from "react-icons/si";
 import { MdOutlineInventory2 } from "react-icons/md";
 import { IoMdAdd } from "react-icons/io";
-import { GiLoveMystery } from "react-icons/gi";
 import useUserData from "../hooks/useUserData";
 import useAuth from "../hooks/useAuth";
+import { TbJewishStarFilled } from "react-icons/tb";
+import { FaIdCard } from "react-icons/fa";
+
 const sellerRoutes = [
     {
         id: 1,
@@ -30,9 +32,22 @@ const sellerRoutes = [
       icon: <IoMdAdd /> 
     }
 ]
+const buyerRoutes = [
+  {
+      id: 1,
+      route: "/dashboard/WishList",
+      title: "Wish List",
+      icon: <TbJewishStarFilled />
+  },
+  {
+      id: 2,
+      route: "/dashboard/CardList",
+      title: "Card List",
+      icon: <FaIdCard />
+  }
+]
 export default function Sidebar() {
     const userData = useUserData();
-    console.log("userDada", userData)
     const { logout } = useAuth();
     return (
         <div>
@@ -50,24 +65,6 @@ export default function Sidebar() {
                     </li>
                     {
                         userData?.role === "seller" &&
-                        //  <>
-                        //     <li className="border border-black rounded-md b-2">
-                        //         <Link to="/dashboard/add-products/">
-                        //             <div className="flex">
-                        //                 <IoMdAdd className="m-2"/>
-                        //                 Add Products
-                        //             </div>
-                        //         </Link>
-                        //     </li>
-                        //     <li className="border border-black rounded-md b-2">
-                        //         <Link to="/dashboard/my-products">
-                        //             <div className="flex">
-                        //                 <MdOutlineInventory2 className="m-2" />
-                        //                 My Products
-                        //             </div>
-                        //         </Link>
-                        //     </li>
-                        // </>
                         sellerRoutes.map((routes) => (
                             <li key={routes.id} className="border border-black rounded-md b-2">
                                 <Link to={routes?.route}>
@@ -81,15 +78,20 @@ export default function Sidebar() {
                             </li>
                         ))
                     }
-                    {
-                        userData?.role === "buyer" && <li className="border border-black rounded-md b-2">
-                            <Link to="/dashboard/MyWishList">
-                                <div className="flex">
-                                    <GiLoveMystery className="m-2" />
-                                    My WishList
-                                </div>
-                            </Link>
-                        </li>
+                     {
+                        userData?.role === "buyer" &&
+                        buyerRoutes.map((routes) => (
+                            <li key={routes.id} className="border border-black rounded-md b-2">
+                                <Link to={routes?.route}>
+                                    <div className="flex">
+                                        <p className="m-2" >
+                                            {routes.icon}
+                                        </p>
+                                        <p>{routes.title}</p>
+                                    </div>
+                                </Link>
+                            </li>
+                        ))
                     }
 
                     <li className="border border-black rounded-md b-2">

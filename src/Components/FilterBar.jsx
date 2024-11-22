@@ -7,7 +7,7 @@ import PropTypes from "prop-types";
 export default function FilterBar({ setBrand, setCategory, handleReset, uniqueBrand, uniquecategory }) {
     return (
         <div className="h-full min-h-screen p-4 bg-gray-200 rounded-t-md">
-            <div className="flex items-center gap-1 text-gray-950">
+            <div classNa    me="flex items-center gap-1 text-gray-950">
                 <FaFilter size={20} />
                 <h2 className="font-serif text-xl ">filter</h2>
             </div>

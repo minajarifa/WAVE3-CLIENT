@@ -18,6 +18,9 @@ import MyProducts from './Pages/Dashboard/SellerDashboard/MyProducts/MyProducts'
 import ActionProducts from './Pages/Dashboard/SellerDashboard/ActionProduucts/ActionProducts';
 import Overview from './Pages/Overview/Overview';
 import ErrorPage from './Components/ErrorPage';
+import WishList from './Pages/Dashboard/BuyarDashboard/WishList';
+import BuyerRoute from './PrivateRoute/BuyerRoute';
+import CardList from './Pages/Dashboard/BuyarDashboard/CardList';
 // import AuthProvider from './AuthProvider/AuthProvider.';
 
 const router = createBrowserRouter([
@@ -32,10 +35,8 @@ const router = createBrowserRouter([
       },
       {
         path: "/Products",
-        element: <PrivateRoute>
-
+        element:
           <Products />
-        </PrivateRoute>
       },
       {
         path: "/About",
@@ -88,6 +89,21 @@ const router = createBrowserRouter([
         </SellerRoute>
       },
       // seller route end
+
+
+      // buyer route start
+      {
+        path: "/dashboard/WishList",
+        element: <BuyerRoute>
+          <WishList />
+        </BuyerRoute>
+      },
+      {
+        path: "/dashboard/CardList",
+        element: <BuyerRoute>
+          <CardList />
+        </BuyerRoute>
+      },
     ]
   }
 ]);

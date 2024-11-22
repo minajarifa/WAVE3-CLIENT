@@ -3,8 +3,8 @@ import ProductCurd from "./ProductCurd";
 
 const FeaturedProduct = () => {
     return (
-        <div className=" grid lg:grid-cols-3">
-         <ProductCurd/>   
+        <div className="grid lg:grid-cols-3">
+         <ProductCurd />   
          <ProductCurd/>   
          <ProductCurd/>   
          <ProductCurd/>   
