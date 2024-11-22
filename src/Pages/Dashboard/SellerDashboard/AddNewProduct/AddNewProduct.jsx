@@ -1,6 +1,7 @@
 import axios from "axios";
 import useAuth from "../../../../hooks/useAuth";
 import { useForm } from "react-hook-form";
+import Swal from "sweetalert2";
 
 
 export default function AddNewProduct() {
@@ -23,7 +24,6 @@ export default function AddNewProduct() {
         const product = { title, brand, price, stock, photo, category, description, sellerEmail }
         console.log(product)
         const token = localStorage.getItem("access-token");
-        console.log(token);
         try {
           const response = await axios.post("http://localhost:4000/add-products", product, {
             headers: {
@@ -31,6 +31,9 @@ export default function AddNewProduct() {
             },
           });
           console.log("Server Response:", response.data);
+          if(response.data.insertedId){
+            Swal.fire("Added the post successfully!");
+          }
         } catch (error) {
           console.error("Error:", error.message);
         }

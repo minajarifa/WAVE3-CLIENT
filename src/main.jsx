@@ -24,7 +24,7 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <MainLayoutes />,
-    errorElement:<ErrorPage/>,
+    errorElement: <ErrorPage />,
     children: [
       {
         path: "/",
@@ -63,10 +63,7 @@ const router = createBrowserRouter([
     children: [
       {
         path: "/dashboard/Overview",
-        element: <PrivateRoute>
-
-          <Overview />
-        </PrivateRoute>
+        element: <Overview />
       },
       // seller route start
       {
@@ -90,7 +87,7 @@ const router = createBrowserRouter([
           <ActionProducts />
         </SellerRoute>
       },
-        // seller route end
+      // seller route end
     ]
   }
 ]);
