@@ -1,92 +1,102 @@
 [
-    {
-      "title": "Floral Summer Dress",
-      "brand": "Elegant Wear",
-      "price": 49.99,
-      "stock": 15,
-      "photo": "https://i.ibb.co.com/ZSHDJpm/images.jpg",
-      "category": "Women",
-      "description": "A light and breezy floral summer dress perfect for casual outings."
-    },
-    {
-      "title": "Women's Casual Shirt",
-      "brand": "Urban Threads",
-      "price": 29.99,
-      "stock": 25,
-      "photo": "https://i.ibb.co.com/QK8kwtg/images.jpg",
-      "category": "Women",
-      "description": "A comfortable and stylish casual shirt for everyday wear."
-    },
-    {
-      "title": "Kid's Party Gown",
-      "brand": "Little Stars",
-      "price": 39.99,
-      "stock": 10,
-      "photo": "https://i.ibb.co.com/HH4wwK9/images.jpg",
-      "category": "Kids",
-      "description": "A charming party gown for kids with intricate lace detailing."
-    },
-    {
-      "title": "Office Blazer",
-      "brand": "Professional Attire",
-      "price": 79.99,
-      "stock": 8,
-      "photo": "https://i.ibb.co.com/TP6Sg3S/images.jpg",
-      "category": "Women",
-      "description": "A sharp and sleek blazer suitable for formal office settings."
-    },
-    {
-      "title": "Yoga Pants",
-      "brand": "Active Life",
-      "price": 24.99,
-      "stock": 20,
-      "photo": "https://i.ibb.co.com/TKg2x6b/download.jpg",
-      "category": "Women",
-      "description": "Stretchable and comfortable yoga pants for active lifestyles."
-    }, {
-        "title": "Floral Summer Dress",
-        "brand": "Elegant Wear",
-        "price": 49.99,
-        "stock": 15,
-        "photo": "https://i.ibb.co.com/ZSHDJpm/images.jpg",
-        "category": "Women",
-        "description": "A light and breezy floral summer dress perfect for casual outings."
-      },
-      {
-        "title": "Women's Casual Shirt",
-        "brand": "Urban Threads",
-        "price": 29.99,
-        "stock": 25,
-        "photo": "https://i.ibb.co.com/QK8kwtg/images.jpg",
-        "category": "Women",
-        "description": "A comfortable and stylish casual shirt for everyday wear."
-      },
-      {
-        "title": "Kid's Party Gown",
-        "brand": "Little Stars",
-        "price": 39.99,
-        "stock": 10,
-        "photo": "https://i.ibb.co.com/HH4wwK9/images.jpg",
-        "category": "Kids",
-        "description": "A charming party gown for kids with intricate lace detailing."
-      },
-      {
-        "title": "Office Blazer",
-        "brand": "Professional Attire",
-        "price": 79.99,
-        "stock": 8,
-        "photo": "https://i.ibb.co.com/TP6Sg3S/images.jpg",
-        "category": "Women",
-        "description": "A sharp and sleek blazer suitable for formal office settings."
-      },
-      {
-        "title": "Yoga Pants",
-        "brand": "Active Life",
-        "price": 24.99,
-        "stock": 20,
-        "photo": "https://i.ibb.co.com/TKg2x6b/download.jpg",
-        "category": "Women",
-        "description": "Stretchable and comfortable yoga pants for active lifestyles."
-      }
-  ]
-  
+  {
+    "title": "Floral Summer Dress",
+    "brand": "Elegant Wear",
+    "price": 49.99,
+    "stock": 15,
+    "photo": "https://i.ibb.co.com/ZSHDJpm/images.jpg",
+    "category": "Women",
+    "description": "A light and breezy floral summer dress perfect for casual outings.",
+    "sellerEmail": "arifa@gmail.com"
+  },
+  {
+    "title": "Women's Casual Shirt",
+    "brand": "Urban Threads",
+    "price": 29.99,
+    "stock": 25,
+    "photo": "https://i.ibb.co.com/QK8kwtg/images.jpg",
+    "category": "Women",
+    "description": "A comfortable and stylish casual shirt for everyday wear.",
+    "sellerEmail": "arifa@gmail.com"
+  },
+  {
+    "title": "Kid's Party Gown",
+    "brand": "Little Stars",
+    "price": 39.99,
+    "stock": 10,
+    "photo": "https://i.ibb.co.com/HH4wwK9/images.jpg",
+    "category": "Kids",
+    "description": "A charming party gown for kids with intricate lace detailing.",
+    "sellerEmail": "arifa@gmail.com"
+  },
+  {
+    "title": "Office Blazer",
+    "brand": "Professional Attire",
+    "price": 79.99,
+    "stock": 8,
+    "photo": "https://i.ibb.co.com/TP6Sg3S/images.jpg",
+    "category": "Women",
+    "description": "A sharp and sleek blazer suitable for formal office settings.",
+    "sellerEmail": "arifa@gmail.com"
+  },
+  {
+    "title": "Yoga Pants",
+    "brand": "Active Life",
+    "price": 24.99,
+    "stock": 20,
+    "photo": "https://ibb.co.com/rZd5Rw8",
+    "category": "Women",
+    "description": "Stretchable and comfortable yoga pants for active lifestyles.",
+    "sellerEmail": "arifa@gmail.com"
+  },
+  {
+    "title": "Floral Summer Dress",
+    "brand": "Elegant Wear",
+    "price": 49.99,
+    "stock": 15,
+    "photo": "https://ibb.co.com/sC1XQjm",
+    "category": "Women's",
+    "description": "A light and breezy floral summer dress perfect for casual outings.",
+    "sellerEmail": "arifa@gmail.com"
+  },
+  {
+    "title": "Women's Casual Shirt",
+    "brand": "Urban Threads",
+    "price": 29.99,
+    "stock": 25,
+    "photo": "https://ibb.co.com/7jjg43x",
+    "category": "Women",
+    "description": "A comfortable and stylish casual shirt for everyday wear.",
+    "sellerEmail": "arifa@gmail.com"
+  },
+  {
+    "title": "Kid's Party Gown",
+    "brand": "Little Stars",
+    "price": 39.99,
+    "stock": 10,
+    "photo": "https://ibb.co.com/rZfcBP7",
+    "category": "Kids",
+    "description": "A charming party gown for kids with intricate lace detailing.",
+    "sellerEmail": "arifa@gmail.com"
+  },
+  {
+    "title": "Office Blazer",
+    "brand": "Professional Attire",
+    "price": 79.99,
+    "stock": 8,
+    "photo": "https://i.ibb.co.com/TP6Sg3S/images.jpg",
+    "category": "Women",
+    "description": "A sharp and sleek blazer suitable for formal office settings.",
+    "sellerEmail": "arifa@gmail.com"
+  },
+  {
+    "title": "Yoga Pants",
+    "brand": "Active Life",
+    "price": 24.99,
+    "stock": 20,
+    "photo": "https://ibb.co.com/6swhRQ0",
+    "category": "Women",
+    "description": "Stretchable and comfortable yoga pants for active lifestyles.",
+    "sellerEmail": "arifa@gmail.com"
+  }
+]

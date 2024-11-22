@@ -31,7 +31,6 @@ export default function WishList() {
     }, [token, userData?._id, latestData])
     return (
         <div>
-
             <h1 className="mb-6 text-3xl font-bold text-center">My WishList</h1>
             <div className="grid grid-cols-3 gap-2">
                 {

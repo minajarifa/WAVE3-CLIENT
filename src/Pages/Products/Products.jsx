@@ -18,7 +18,7 @@ const Products = () => {
     const [uniquecategory, setUniquecategory] = useState([]);
     // const [page, setPage] = useState([1]);
     // const [totalPage, setTotalPage] = useState([1]);
-    console.log(brand, search, sort, category);
+
 
     // &page=${page}
     useEffect(() => {
@@ -55,6 +55,7 @@ const Products = () => {
     //         window.scrollTo({ top: 0, behavior: "smooth" })
     //     }
     // }
+    console.log("products", products)
     return (
         <div>
             {/* title */}

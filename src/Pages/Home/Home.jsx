@@ -9,15 +9,15 @@ const Home = () => {
         <div>
             <Banner/>
             <div className="my-10">
-                <h1 className="mb-14 text-xl flex justify-center">Featured Product</h1>
+                <h1 className="flex justify-center text-xl mb-14">Featured Product</h1>
             <FeaturedProduct/>
             </div>
             <div className="my-10">
-            <h1 className="mb-14 text-xl flex justify-center">User Review</h1>
+            <h1 className="flex justify-center text-xl mb-14">User Review</h1>
                 <UserReview/>
             </div>
             <div className="my-10">
-            <h1 className="mb-14 text-xl flex justify-center">Frequently Asked Question</h1>
+            <h1 className="flex justify-center text-xl mb-14">Frequently Asked Question</h1>
                 <According/>
             </div>
         </div>
