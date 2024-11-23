@@ -46,6 +46,20 @@ const buyerRoutes = [
       icon: <FaIdCard />
   }
 ]
+const adminRoutes = [
+    {
+        id: 1,
+        route: "/dashboard/ViewAllUser",
+        title: "View all users",
+        icon: <TbJewishStarFilled />
+    },
+    {
+        id: 2,
+        route: "/dashboard/ChangeUserRole",
+        title: "Change User Role",
+        icon: <FaIdCard />
+    }
+  ]
 export default function Sidebar() {
     const userData = useUserData();
     const { logout } = useAuth();
@@ -81,6 +95,21 @@ export default function Sidebar() {
                      {
                         userData?.role === "buyer" &&
                         buyerRoutes.map((routes) => (
+                            <li key={routes.id} className="border border-black rounded-md b-2">
+                                <Link to={routes?.route}>
+                                    <div className="flex">
+                                        <p className="m-2" >
+                                            {routes.icon}
+                                        </p>
+                                        <p>{routes.title}</p>
+                                    </div>
+                                </Link>
+                            </li>
+                        ))
+                    }
+                    {
+                        userData?.role === "admin" &&
+                        adminRoutes.map((routes) => (
                             <li key={routes.id} className="border border-black rounded-md b-2">
                                 <Link to={routes?.route}>
                                     <div className="flex">

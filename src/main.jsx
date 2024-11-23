@@ -23,6 +23,9 @@ import BuyerRoute from './PrivateRoute/BuyerRoute';
 import CardList from './Pages/Dashboard/BuyarDashboard/CardList';
 import UpdatedPage from './Pages/Dashboard/SellerDashboard/ActionProduucts/UpdatedPage';
 import DetailsPageSeller from './Pages/Dashboard/SellerDashboard/DetailsPageSeller';
+import ViewAllUser from './Pages/Dashboard/AdminDashboard/ViewAllUser/ViewAllUser';
+import AdminRoute from './PrivateRoute/AdminRoute';
+import ChangeUserRole from './Pages/Dashboard/AdminDashboard/ChangeUserRole/ChangeUserRole';
 // import AuthProvider from './AuthProvider/AuthProvider.';
 
 const router = createBrowserRouter([
@@ -89,7 +92,7 @@ const router = createBrowserRouter([
 
           <UpdatedPage />
         </SellerRoute>),
-         loader: ({ params }) => fetch(`http://localhost:4000/my-product/${params.id}`),
+        loader: ({ params }) => fetch(`http://localhost:4000/my-product/${params.id}`),
       },
       {
         path: "/dashboard/action-products",
@@ -104,7 +107,7 @@ const router = createBrowserRouter([
 
           <DetailsPageSeller />
         </SellerRoute>,
-         loader: ({ params }) => fetch(`http://localhost:4000/my-product/${params.id}`),
+        loader: ({ params }) => fetch(`http://localhost:4000/my-product/${params.id}`),
       },
       // seller route end
 
@@ -121,6 +124,22 @@ const router = createBrowserRouter([
           <CardList />
         </BuyerRoute>
       },
+      // buyer route start
+
+      // Admin Route start
+      {
+        path: "/dashboard/ViewAllUser",
+        element: <AdminRoute>
+          <ViewAllUser />
+        </AdminRoute>
+      },
+      {
+        path: "/dashboard/ChangeUserRole",
+        element: <AdminRoute>
+          <ChangeUserRole />
+        </AdminRoute>
+      },
+
     ]
   },
   {
