@@ -21,6 +21,8 @@ import ErrorPage from './Components/ErrorPage';
 import WishList from './Pages/Dashboard/BuyarDashboard/WishList';
 import BuyerRoute from './PrivateRoute/BuyerRoute';
 import CardList from './Pages/Dashboard/BuyarDashboard/CardList';
+import UpdatedPage from './Pages/Dashboard/SellerDashboard/ActionProduucts/UpdatedPage';
+import DetailsPageSeller from './Pages/Dashboard/SellerDashboard/DetailsPageSeller';
 // import AuthProvider from './AuthProvider/AuthProvider.';
 
 const router = createBrowserRouter([
@@ -82,14 +84,29 @@ const router = createBrowserRouter([
         </SellerRoute>
       },
       {
+        path: "/dashboard/UpdatedPage/:id",
+        element: (<SellerRoute>
+
+          <UpdatedPage />
+        </SellerRoute>),
+         loader: ({ params }) => fetch(`http://localhost:4000/my-product/${params.id}`),
+      },
+      {
         path: "/dashboard/action-products",
         element: <SellerRoute>
 
           <ActionProducts />
         </SellerRoute>
       },
-      // seller route end
+      {
+        path: "/dashboard/DetailsPageSeller/:id",
+        element: <SellerRoute>
 
+          <DetailsPageSeller />
+        </SellerRoute>,
+         loader: ({ params }) => fetch(`http://localhost:4000/my-product/${params.id}`),
+      },
+      // seller route end
 
       // buyer route start
       {
@@ -105,6 +122,9 @@ const router = createBrowserRouter([
         </BuyerRoute>
       },
     ]
+  },
+  {
+
   }
 ]);
 

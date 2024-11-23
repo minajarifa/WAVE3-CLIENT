@@ -53,7 +53,7 @@ export default function Sidebar() {
         <div>
             {/*  main sideber*/}
             <div className="min-h-screen px-8 py-16 text-gray-900 bg-gray-200 border-r-2 border-black">
-                <h1 className="mb-8 text-3xl font-bold">Gadget  Shop</h1>
+                <h1 className="mb-8 text-3xl font-bold">Arulota Fashion</h1>
                 <ul className="flex flex-col gap-2">
                     <li className="border border-black rounded-md b-2">
                         <Link to="/Dashboard/Overview">

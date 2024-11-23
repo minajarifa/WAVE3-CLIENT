@@ -32,7 +32,6 @@ const ProductCurd = ({ product, isInWishList, latestData, setLatestData, isInCar
                 setLatestData((prev) => !prev);
             }
         });
-
     }
     // handleAddCardList button 
     const handleAddCardList = async () => {
@@ -55,7 +54,6 @@ const ProductCurd = ({ product, isInWishList, latestData, setLatestData, isInCar
                 setLatestData((prev) => !prev);
             }
         });
-
     }
     return (
         <div>
@@ -73,22 +71,20 @@ const ProductCurd = ({ product, isInWishList, latestData, setLatestData, isInCar
                     <h2 className="text-sm ">Price: $<span className="text-red-700">{product?.price}</span></h2>
                     <h2 className="">{product?.sellerEmail}</h2>
                     <p>{product?.description.length > 50 ? `${product?.description.slice(0, 50)}...` : product?.description}</p>
-
                     <div className=" card-actions">
                         {
-                            isInWishList ? (
-                                <button onClick={handleRemoveWishList} className="w-full text-white bg-red-600 btn">Remove from wish list</button>
-                            ) : (
-                                <>
-                                    <div className="flex items-center justify-center">
-                                        <button onClick={handleAddWishList} className="m-2 btn btn-primary">Add to wish lish</button>
-                                        <button onClick={handleAddCardList} className="m-2 btn btn-primary">Add to card lish</button>
-                                    </div>
-                                </>
-                            )
+                            isInWishList &&
+                            <button onClick={handleRemoveWishList} className="w-full text-white bg-red-600 btn">Remove from wish list</button>
                         }
                         {
-                            isInCardList && <button onClick={handleRemoveCardList} className="w-full text-white bg-red-600 btn">Remove from wish list</button>
+                            (!isInCardList && !isInWishList) &&
+                            <div className="flex items-center justify-center">
+                                <button onClick={handleAddWishList} className="m-2 btn btn-primary">Add to wish lish</button>
+                                <button onClick={handleAddCardList} className="m-2 btn btn-primary">Add to card lish</button>
+                            </div>
+                        }
+                        {
+                            isInCardList && <button onClick={handleRemoveCardList} className="w-full text-white bg-red-600 btn">Remove from card list</button>
                         }
                     </div>
                 </div>

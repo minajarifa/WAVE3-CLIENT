@@ -6,12 +6,12 @@ import Swal from "sweetalert2";
 
 export default function AddNewProduct() {
     const { user, } = useAuth();
-  const {
-    register,
-    handleSubmit,
+    const {
+        register,
+        handleSubmit,
 
-    formState: { errors },
-  } = useForm();
+        formState: { errors },
+    } = useForm();
     const onSubmit = async (data) => {
         const title = data.title;
         const brand = data.brand;
@@ -25,19 +25,19 @@ export default function AddNewProduct() {
         console.log(product)
         const token = localStorage.getItem("access-token");
         try {
-          const response = await axios.post("http://localhost:4000/add-products", product, {
-            headers: {
-              Authorization: `Bearer ${token}`,
-            },
-          });
-          console.log("Server Response:", response.data);
-          if(response.data.insertedId){
-            Swal.fire("Added the post successfully!");
-          }
+            const response = await axios.post("http://localhost:4000/add-products", product, {
+                headers: {
+                    Authorization: `Bearer ${token}`,
+                },
+            });
+            console.log("Server Response:", response.data);
+            if (response.data.insertedId) {
+                Swal.fire("Added the post successfully!");
+            }
         } catch (error) {
-          console.error("Error:", error.message);
+            console.error("Error:", error.message);
         }
-      };
+    };
     return (
         <div>
             <h1 className="mb-12 text-2xl text-center ">Add a post</h1>
@@ -102,6 +102,7 @@ export default function AddNewProduct() {
                 <div className="mt-6 form-control">
                     <button type="submit" className="btn btn-primary">Add Product</button>
                 </div>
-            </form></div>
+            </form>
+            </div>
     )
 }

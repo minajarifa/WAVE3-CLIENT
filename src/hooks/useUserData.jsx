@@ -6,7 +6,7 @@ import axios from "axios";
 export default function useUserData() {
     const { user, loading } = useAuth();
     const [userData, setUserData] = useState();
-    console.log(user, loading);
+    // console.log(user, loading);
     useEffect(() => {
         const fetchUserData = async () => {
             try {
