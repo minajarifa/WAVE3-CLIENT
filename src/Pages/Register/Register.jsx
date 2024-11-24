@@ -22,8 +22,8 @@ const Register = () => {
         const wishList = [];
         const card=[]
         const userData = { email, role, status, wishList,card }
-        console.log(userData)
-        console.log(data)
+        // console.log(userData)
+        // console.log(data)
         try {
             const result = await createUser(data.email, data.password)
             await updateUserProfile(data.name, data.photo);
@@ -32,12 +32,12 @@ const Register = () => {
                 displayName: data.name,
                 photoURL: data.photo,
             })
-            const res = await axios.post('http://localhost:4000/users', userData)
-            console.log("This is res", res.data);
+            const res = await axios.post('https://wave3-server.vercel.app/users', userData)
+            // console.log("This is res", res.data);
             if (res.data.insertedId) {
                 Swal.fire("User created successfully ,and please login now.");
             }
-            console.log(userData)
+            // console.log(userData)
             // logOut();
             navigate('/')
 

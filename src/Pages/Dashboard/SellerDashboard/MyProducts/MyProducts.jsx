@@ -7,11 +7,11 @@ import ActionCard from "../ActionProduucts/ActionCard";
 export default function MyProducts() {
   const [products, setProducts] = useState([]);
   const { user } = useAuth();
-  console.log(user)
+  // console.log(user)
   useEffect(() => {
     const getData = async () => {
       try {
-        await axios.get(`http://localhost:4000/my-products/${user.email}`)
+        await axios.get(`https://wave3-server.vercel.app/my-products/${user.email}`)
           .then((res) => {
             setProducts(res.data)
           })

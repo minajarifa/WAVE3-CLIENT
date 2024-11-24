@@ -7,26 +7,26 @@ import useUserData from "../../../hooks/useUserData";
 
 
 
-const ProductCurd = ({ product, isInWishList, latestData, setLatestData, isInCardList }) => {
+const ProductCurd = ({ product, isInWishList, setLatestData, isInCardList }) => {
     const userDara = useUserData();
     const userEmail = userDara?.email;
-    console.log("latestData", latestData);
+    // console.log("latestData", latestData);
     // handleAddWishList button 
     const handleAddWishList = async () => {
         if (userDara?.status === "pending") return Swal.fire("not permited");
-        await axios.patch("http://localhost:4000/wishList/add", { userEmail: userEmail, productId: product._id }).then((res) => {
+        await axios.patch("https://wave3-server.vercel.app/wishList/add", { userEmail: userEmail, productId: product._id }).then((res) => {
             if (res.data.modifiedCount === 1) {
-                console.log(res.data)
+                // console.log(res.data)
                 Swal.fire("Product added successfully in wishlist!");
             }
         })
     }
     // handle remove WishList button 
     const handleRemoveWishList = async () => {
-        await axios.delete("http://localhost:4000/wishList/remove", {
+        await axios.delete("https://wave3-server.vercel.app/wishList/remove", {
             data: { userEmail: userEmail, productId: product._id },
         }).then((res) => {
-            console.log(res.data);
+            // console.log(res.data);
             if (res.data.modifiedCount === 1) {
                 Swal.fire("Product removed successfully!");
                 setLatestData((prev) => !prev);
@@ -36,19 +36,19 @@ const ProductCurd = ({ product, isInWishList, latestData, setLatestData, isInCar
     // handleAddCardList button 
     const handleAddCardList = async () => {
         if (userDara?.status === "pending") return Swal.fire("not permited");
-        await axios.patch("http://localhost:4000/card/add", { userEmail: userEmail, productId: product._id }).then((res) => {
+        await axios.patch("https://wave3-server.vercel.app/card/add", { userEmail: userEmail, productId: product._id }).then((res) => {
             if (res.data.modifiedCount === 1) {
-                console.log(res.data)
+                // console.log(res.data)
                 Swal.fire("Product added successfully in wishlist!");
             }
         })
     }
     // handle remove WishList button 
     const handleRemoveCardList = async () => {
-        await axios.delete("http://localhost:4000/card/remove", {
+        await axios.delete("https://wave3-server.vercel.app/card/remove", {
             data: { userEmail: userEmail, productId: product._id },
         }).then((res) => {
-            console.log(res.data);
+            // console.log(res.data);
             if (res.data.modifiedCount === 1) {
                 Swal.fire("Product removed successfully!");
                 setLatestData((prev) => !prev);

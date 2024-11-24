@@ -52,12 +52,6 @@ const adminRoutes = [
         route: "/dashboard/ViewAllUser",
         title: "View all users",
         icon: <TbJewishStarFilled />
-    },
-    {
-        id: 2,
-        route: "/dashboard/ChangeUserRole",
-        title: "Change User Role",
-        icon: <FaIdCard />
     }
   ]
 export default function Sidebar() {

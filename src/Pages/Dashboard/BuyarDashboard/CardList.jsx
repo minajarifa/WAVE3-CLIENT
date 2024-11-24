@@ -11,11 +11,11 @@ export default function CardList() {
     const [latestData, setLatestData] = useState(true)
     const userData = useUserData();
     const token = localStorage.getItem("access-token")
-    console.log("userData",wishList)
+    // console.log("userData",wishList)
     useEffect(() => {
         const fetchCardList = async () => {
             setLoading(true)
-            await axios.get(`http://localhost:4000/card/${userData?._id}`, {
+            await axios.get(`https://wave3-server.vercel.app/card/${userData?._id}`, {
                 headers: {
                     authorization: `Bearer ${token}`,
                 },

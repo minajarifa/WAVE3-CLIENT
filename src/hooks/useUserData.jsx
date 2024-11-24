@@ -10,7 +10,7 @@ export default function useUserData() {
     useEffect(() => {
         const fetchUserData = async () => {
             try {
-                const res = await axios.get(`http://localhost:4000/user/${user.email}`);
+                const res = await axios.get(`https://wave3-server.vercel.app/user/${user.email}`);
                 setUserData(res.data)
             } catch (error) {
                 console.log(error)

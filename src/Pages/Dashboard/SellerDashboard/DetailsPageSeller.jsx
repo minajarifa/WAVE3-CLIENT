@@ -3,7 +3,7 @@ import { useLoaderData } from "react-router-dom"
 
 export default function DetailsPageSeller() {
     const product = useLoaderData();
-    console.log(product)
+    // console.log(product)
     return (
         <div className="flex items-start justify-center">
             {/*  */}

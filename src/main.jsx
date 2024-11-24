@@ -92,7 +92,7 @@ const router = createBrowserRouter([
 
           <UpdatedPage />
         </SellerRoute>),
-        loader: ({ params }) => fetch(`http://localhost:4000/my-product/${params.id}`),
+        loader: ({ params }) => fetch(`https://wave3-server.vercel.app/my-product/${params.id}`),
       },
       {
         path: "/dashboard/action-products",
@@ -107,7 +107,7 @@ const router = createBrowserRouter([
 
           <DetailsPageSeller />
         </SellerRoute>,
-        loader: ({ params }) => fetch(`http://localhost:4000/my-product/${params.id}`),
+        loader: ({ params }) => fetch(`https://wave3-server.vercel.app/my-product/${params.id}`),
       },
       // seller route end
 
@@ -134,11 +134,14 @@ const router = createBrowserRouter([
         </AdminRoute>
       },
       {
-        path: "/dashboard/ChangeUserRole",
+        path: "/dashboard/ChangeUserRole/:id",
         element: <AdminRoute>
           <ChangeUserRole />
-        </AdminRoute>
+        </AdminRoute>,
+         loader: ({ params }) => fetch(`https://wave3-server.vercel.app/users/${params.id}`),
+        
       },
+      
 
     ]
   },

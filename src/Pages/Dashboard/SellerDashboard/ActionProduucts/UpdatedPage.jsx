@@ -7,7 +7,7 @@ import { useLoaderData, useNavigate } from "react-router-dom";
 export default function UpdatedPage() {
   const navigate = useNavigate();
   const productCard = useLoaderData();
-  console.log(productCard)
+  // console.log(productCard)
   const { user, } = useAuth();
   const {
       register, 
@@ -25,15 +25,15 @@ export default function UpdatedPage() {
     const description = data.description;
     const sellerEmail = user.email;
     const product = { title, brand, price, stock, photo, category, description, sellerEmail }
-    console.log(product)
+    // console.log(product)
     const token = localStorage.getItem("access-token");
     try {
-        const response = await axios.put(`http://localhost:4000/my-product/${productCard._id}`, product, {
+        const response = await axios.put(`https://wave3-server.vercel.app/my-product/${productCard._id}`, product, {
             headers: {
                 Authorization: `Bearer ${token}`,
             },
         });
-        console.log("Server Response:", response.data);
+        // console.log("Server Response:", response.data);
         if (response.data.acknowledged) {
             Swal.fire("Updated the post successfully!");
             navigate("/dashboard/action-products")

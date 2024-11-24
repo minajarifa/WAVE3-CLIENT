@@ -22,15 +22,15 @@ export default function AddNewProduct() {
         const description = data.description;
         const sellerEmail = user.email;
         const product = { title, brand, price, stock, photo, category, description, sellerEmail }
-        console.log(product)
+        // console.log(product)
         const token = localStorage.getItem("access-token");
         try {
-            const response = await axios.post("http://localhost:4000/add-products", product, {
+            const response = await axios.post("https://wave3-server.vercel.app/add-products", product, {
                 headers: {
                     Authorization: `Bearer ${token}`,
                 },
             });
-            console.log("Server Response:", response.data);
+            // console.log("Server Response:", response.data);
             if (response.data.insertedId) {
                 Swal.fire("Added the post successfully!");
             }

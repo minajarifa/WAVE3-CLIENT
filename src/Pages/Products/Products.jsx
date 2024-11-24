@@ -24,9 +24,9 @@ const Products = () => {
     useEffect(() => {
         setLoading(true);
         const fetch = async () => {
-            await axios.get(`http://localhost:4000/all-products?title=${search}&limit=9&sort=${sort}&brand=${brand}&category=${category}`)
+            await axios.get(`https://wave3-server.vercel.app/all-products?title=${search}&limit=9&sort=${sort}&brand=${brand}&category=${category}`)
                 .then((res) => {
-                    console.log("res.data", res.data);
+                    // console.log("res.data", res.data);
                     setProducts(res.data.products);
                     setUniqueBrand(res.data.brand);
                     setUniquecategory(res.data.category);
@@ -55,7 +55,7 @@ const Products = () => {
     //         window.scrollTo({ top: 0, behavior: "smooth" })
     //     }
     // }
-    console.log("products", products)
+    // console.log("products", products)
     return (
         <div>
             {/* title */}

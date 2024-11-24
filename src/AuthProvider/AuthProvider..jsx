@@ -61,10 +61,10 @@ const AuthProvider = ({ children }) => {
    useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, currentUser => {
       setUser(currentUser)
-      console.log('CurrentUser-->', currentUser)
+      // console.log('CurrentUser-->', currentUser)
       // 
       if(currentUser){
-        axios.post('http://localhost:4000/authentication',{email:currentUser.email})
+        axios.post('https://wave3-server.vercel.app/authentication',{email:currentUser.email})
         .then(data=>{
             if(data.data){
                 localStorage.setItem("access-token",data?.data?.token)

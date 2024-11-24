@@ -10,10 +10,10 @@ export default function ActionCard({ product, isDetails ,getData}) {
     
 
     const handleDeleteSellerProduct =async(_id)=>{
-        console.log('delete')
+        // console.log('delete')
         try{
-          const {data}= await axios.delete(`http://localhost:4000/delete/${_id}`);
-          console.log(data)
+          const {data}= await axios.delete(`https://wave3-server.vercel.app/delete/${_id}`);
+        //   console.log(data)
           getData()
         }catch(error){
             console.log(error)
